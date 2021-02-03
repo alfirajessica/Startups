@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,21 @@ Route::get('/', function () {
         return view('index');
     });
 
+Route::get(
+        'login',
+        [UserAuthController::class, 'login']
+    )->name('login');
 
+Route::get(
+        'register',
+        [UserAuthController::class, 'register']
+    )->name('register');
+
+//request -> create -> UserAuth
+Route::post(
+        'create',
+        [UserAuthController::class, 'create']
+    )->name('auth.create');
 
 //buyer
 

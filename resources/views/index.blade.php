@@ -1,14 +1,15 @@
 <html lang="en">
 @extends('layout.head')
 <body>
-@extends('layout.nav')
+@extends('guestPage.guestNav')
 
 <main>
+    <div class="container">
     @include('layout.jumbotron')
     @include('layout.category')
 
     <!-- container -->
-    <div class="container">
+    
         <div class="row my-4"> <!-- row -->
         <div class="col-sm-6 my-4">
                 <div class="card">

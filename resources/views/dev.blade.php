@@ -1,13 +1,13 @@
 <html lang="en">
 @extends('layout.head')
 <body>
-@extends('devPage.devNav')
+@extends('layout.nav')
 
 <main>
     @include('layout.jumbotron')
-    @include('layout.category')
-
     
+    
+
     @include('layout.footer')
 </main>
 
