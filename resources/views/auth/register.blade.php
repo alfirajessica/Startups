@@ -8,58 +8,56 @@
             <div class="col-md-8 col-md-offset-4">
                 <h4> User Register</h4>
                 <hr>
-                <form action="{{ route('auth.create')}}" method="POST">
+                <form action="{{ route('auth.save')}}" method="POST" id="register_form">
                 @csrf
                     <div class="form-group">
-                        <label for="nama">Nama Depan</label>
-                        <input type="text" name="nama" id="" class="form-control" placeholder="masukkan nama anda" value="{{ old('nama')}}">
-                        <span class="text-danger">@error('nama'){{$message}}@enderror</span>
+                        <label for="firstname">Nama Depan</label>
+                        <input type="text" name="firstname" id="" class="form-control" placeholder="Nama Pertama Anda">
+                        <span class="text-danger error-text firstname_error"></span>
                     </div>
                     <div class="form-group">
-                        <label for="nama_belakang">Nama Belakang</label>
-                        <input type="text" name="nama_belakang" id="" class="form-control">
+                        <label for="lastname">Nama Belakang</label>
+                        <input type="text" name="lastname" id="" class="form-control" placeholder="Nama Belakang Anda">
+                        <span class="text-danger error-text lastname_error"></span>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="" class="form-control">
-                        <span class="text-danger">@error('email'){{$message}}@enderror</span>
+                        <input type="email" name="email" id="" class="form-control" placeholder="Email Anda">
+                        <span class="text-danger error-text email_error"></span>
                     </div>
                     <div class="form-group">
-                        <label for="password">Passwrd</label>
+                        <label for="password">Password</label>
                         <input type="password" name="password" id="" class="form-control">
-                        <span class="text-danger">@error('password'){{$message}}@enderror</span>
+                        <span class="text-danger error-text password_error"></span>
                     </div>
+                    
                     <div class="form-group">
-                        <button type="submit">Continue</button>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Role</label>
+                        <label for="role">Role</label>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-primary active">
-                                <input type="radio" name="role" id="" autocomplete="off" checked>
+                                <input value="1" type="radio" name="role" id="" autocomplete="off">
                                 Developer
                             </label>
                             <label class="btn btn-primary">
-                                <input type="radio" name="role" id="" autocomplete="off">
-                                Pembeli
-                            </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" name="role" id=" " autocomplete="off ">
+                                <input value="2" type="radio" name="role" id=" " autocomplete="off ">
                                 Investor
                             </label>
                         </div>
+                        <span class="text-danger error-text role_error"></span>
                     </div>
+
                     <div class="form-group">
                       <button type="submit">Register</button>
                     </div>
                     <br>
-                    <a href="login">Sudah Punya Akun!s</a>
+                    <a href="{{ route('auth.login') }}">Sudah Punya Akun!</a>
                 </form>
             </div>
         </div>
     </div>
 </main>
+
+
 
 
 </body>
