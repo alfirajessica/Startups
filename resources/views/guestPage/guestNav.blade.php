@@ -12,10 +12,10 @@
       </ul>
       <ul class="navbar-nav mr-right mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Log in </a>
+          <a class="nav-link {{ Request::is('login') ? 'active' : '' }}" href="{{ route('auth.login')}}">Login </a>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-outline-success">Register</button>
+          <a class="nav-link" href="{{ route('auth.register')}}">Register </a>
         </li>
       </ul>
     </div>

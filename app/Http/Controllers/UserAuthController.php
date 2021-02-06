@@ -39,8 +39,8 @@ class UserAuthController extends Controller
             return response()->json(['status'=>0, 'error'=>$validator->errors()->toArray()]);
         }else{
             $user = new User;
-            $user->firstname = $request->firstname;
-            $user->lastname = $request->lastname;
+            $user->firstname = ucfirst($request->firstname);
+            $user->lastname = ucfirst($request->lastname);
             $user->email = $request->email;
             $user->password = Hash::make($request->password);
             $user->role = $request->role;
@@ -65,28 +65,41 @@ class UserAuthController extends Controller
 
     //when click login
     function check(Request $request){
-        //return $request->input();
-        //validate request
-
+        //Validate requests
         $request->validate([
-            'email'=>'required|email',
-            'password'=>'required|min:5|max:10',
+             'email'=>'required|email',
+             'password'=>'required|min:5|max:10'
         ]);
 
-        //if form validated sucessfuly, the process login
 
-        $userinfo = User::where('email','=', $request->email)->first();
-        
-        if ($userinfo) {
-            return back()->with('fail','we do not recognize your email address');
+        $userInfo = User::where('email','=', $request->email)->first();
+
+        if(!$userInfo){
+            return response()->json(['status'=>-1, 'msg'=>'unknown email']);
+            //return back()->with('fail','We do not recognize your email address');
         }else{
             //check password
-            if (Hash::check($request->password, $userinfo->password)) {
-                $request->session()->put('LoggedUser', $userinfo->id);
-                return redirect('devPage/home');
+            if(Hash::check($request->password, $userInfo->password)){
+                $request->session()->put('LoggedUser', $userInfo->id);
+                //return redirect('devPage/home');
+                return response()->json(['status'=>1, 'msg'=>'']);
+
             }else{
-                return back()->with('fail','Incorrect Password');
+                return response()->json(['status'=>0, 'msg'=>'incorrect pass email']);
+                //return back()->with('fail','Incorrect password');
             }
+        }
+    }
+
+    function home(){
+        $data = ['LoggedUserInfo'=>User::where('id','=', session('LoggedUser'))->first()];
+        return view('layout.home', $data);
+    }
+
+    function logout(){
+        if (session()->has('LoggedUser')) {
+            session()->pull('LoggedUser');
+            return redirect('/auth/login');
         }
     }
 

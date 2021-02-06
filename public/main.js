@@ -25,4 +25,33 @@ $(function () {
             }
         });
     });
+
+    $("#login_form").on("submit",function (e) {
+        e.preventDefault();
+        console.log("ini login");
+
+        $.ajax({
+            url:$(this).attr('action'),
+            method:$(this).attr('method'),
+            data:new FormData(this),
+            processData:false,
+            dataType:'json',
+            contentType:false,
+            beforeSend:function() {
+                $(document).find('span.error-text').text('');
+            },
+            success:function(data) {
+                if (data.status == -1) {
+                    $('span.email_error').text(data.msg);
+                }
+                else if (data.status == 0) {
+                    $('span.password_error').text(data.msg);
+                }
+                else{
+                    $('#login_form')[0].reset();
+                    window.location.href = '/layout/home';
+                }
+            }
+        });
+    });
 });

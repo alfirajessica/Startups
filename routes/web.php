@@ -33,15 +33,7 @@ Route::get('/', function () {
         return view('index');
     });
 
-Route::get(
-        '/auth/register',
-        [UserAuthController::class, 'register']
-    )->name('auth.register');
 
-Route::get(
-        '/auth/login',
-        [UserAuthController::class, 'login']
-    )->name('auth.login');
 
 //save to DB, for table=Users, 
 //the method is POST --- register
@@ -57,8 +49,31 @@ Route::POST(
     [UserAuthController::class, 'check']
 )->name('auth.check');
 
+Route::get(
+    '/auth/logout',
+    [UserAuthController::class, 'logout']
+)->name('auth.logout');
 
 
+
+
+//apply auth check middleware
+Route::group(['middleware'=>['AuthCheck']], function(){
+        Route::get(
+            '/auth/register',
+            [UserAuthController::class, 'register']
+        )->name('auth.register');
+    
+        Route::get(
+            '/auth/login',
+            [UserAuthController::class, 'login']
+        )->name('auth.login');
+
+        Route::get(
+            '/layout/home',
+            [UserAuthController::class, 'home']
+        )->name('layout.home');
+    });
 
 
 
