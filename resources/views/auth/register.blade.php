@@ -10,11 +10,6 @@
                 <hr>
                 <form action="{{ route('auth.save')}}" method="POST" id="register_form">
                 @csrf
-                @if(Session::get('fail'))
-             <div class="alert alert-danger">
-                {{ Session::get('fail') }}
-             </div>
-           @endif
                     <div class="form-group">
                         <label for="firstname">Nama Depan</label>
                         <input type="text" name="firstname" id="" class="form-control" placeholder="Nama Pertama Anda">
