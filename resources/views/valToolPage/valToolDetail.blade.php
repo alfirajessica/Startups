@@ -13,105 +13,126 @@
                     <input type="text" name="id" value="{{ $id }}">
                     <div class="row">
                         <div class="form-group">
-                            <label for="purchaseNewAsset1">Purchase of new fixed assets 1</label>
-                            <input type="number" name="purchaseNewAsset1" id="" class="form-control">
-                            <span class="text-danger error-text purchaseNewAsset1_error"></span>
+                            <label for="n_purchase_new_assets_[1]">Purchase of new fixed assets 1</label>
+                            <input type="number" name="n_purchase_new_assets_[1]" id="" class="form-control">
+                            <span class="text-danger error-text n_purchase_new_assets1_error"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="purchaseNewAsset2">Purchase of new fixed assets 2</label>
-                            <input type="number" name="purchaseNewAsset2" id="" class="form-control">
-                            <span class="text-danger error-text purchaseNewAsset2_error"></span>
+                            <label for="n_purchase_new_assets_[2]">Purchase of new fixed assets 2</label>
+                            <input type="number" name="n_purchase_new_assets_[2]" id="" class="form-control">
+                            <span class="text-danger error-text n_purchase_new_assets2_error"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="purchaseNewAsset3">Purchase of new fixed assets 3</label>
-                            <input type="number" name="purchaseNewAsset3" id="" class="form-control">
-                            <span class="text-danger error-text purchaseNewAsset3_error"></span>
+                            <label for="n_purchase_new_assets_[3]">Purchase of new fixed assets 3</label>
+                            <input type="number" name="n_purchase_new_assets_[3]" id="" class="form-control">
+                            <span class="text-danger error-text n_purchase_new_assets3_error"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="purchaseNewAsset4">Purchase of new fixed assets 4</label>
-                            <input type="number" name="purchaseNewAsset4" id="" class="form-control">
-                            <span class="text-danger error-text purchaseNewAsset4_error"></span>
+                            <label for="n_purchase_new_assets_[4]">Purchase of new fixed assets 4</label>
+                            <input type="number" name="n_purchase_new_assets_[4]" id="" class="form-control">
+                            <span class="text-danger error-text n_purchase_new_assets4_error"></span>
                         </div>
                     </div>
-                
-                    <div class="form-group">
-                        <label for="depNewAsset">Depreciation on [new] assets</label>
-                        <input type="number" name="depNewAsset" id="" class="form-control">
-                        <span class="text-danger error-text depNewAsset_error"></span>
+                    
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="n_depreciation_new_assets_[1]">Depreciation on [new] assets 2</label>
+                            <input type="number" name="n_depreciation_new_assets_[1]" id="" class="form-control">
+                            <span class="text-danger error-text n_depreciation_new_assets1_error"></span>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="n_depreciation_new_assets_[2]">Depreciation on [new] assets 2</label>
+                            <input type="number" name="n_depreciation_new_assets_[2]" id="" class="form-control">
+                            <span class="text-danger error-text n_depreciation_new_assets2_error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="n_depreciation_new_assets_[3]">Depreciation on [new] assets 3</label>
+                            <input type="number" name="n_depreciation_new_assets_[3]" id="" class="form-control">
+                            <span class="text-danger error-text n_depreciation_new_assets3_error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="n_depreciation_new_assets_[4]">Depreciation on [new] assets 4</label>
+                            <input type="number" name="n_depreciation_new_assets_[4]" id="" class="form-control">
+                            <span class="text-danger error-text n_depreciation_new_assets4_error"></span>
+                        </div>
+                    </div>
+                    
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="n_loans_returned_[1]">Loans returned 1</label>
+                            <input type="number" name="n_loans_returned_[1]" id="" class="form-control">
+                            <span class="text-danger error-text n_loans_returned1_error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="n_loans_returned_[2]">Loans returned 2</label>
+                            <input type="number" name="n_loans_returned_[2]" id="" class="form-control">
+                            <span class="text-danger error-text n_loans_returned2_error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="n_loans_returned_[3]">Loans returned 3</label>
+                            <input type="number" name="n_loans_returned_[3]" id="" class="form-control">
+                            <span class="text-danger error-text n_loans_returned3_error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="n_loans_returned_[4]">Loans returned 4</label>
+                            <input type="number" name="n_loans_returned_[4]" id="" class="form-control">
+                            <span class="text-danger error-text n_loans_returned4_error"></span>
+                        </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group">
-                            <label for="loansRe1">Loans returned 1</label>
-                            <input type="number" name="loansRe1" id="" class="form-control">
-                            <span class="text-danger error-text loansRe1_error"></span>
+                            <label for="n_new_loan_[1]">New Loans Taken 1</label>
+                            <input type="number" name="n_new_loan_[1]" id="" class="form-control">
+                            <span class="text-danger error-text n_new_loan1_error"></span>
                         </div>
                         <div class="form-group">
-                            <label for="loansRe2">Loans returned 2</label>
-                            <input type="number" name="loansRe2" id="" class="form-control">
-                            <span class="text-danger error-text loansRe2_error"></span>
+                            <label for="n_new_loan_[2]">New Loans Taken 2</label>
+                            <input type="number" name="n_new_loan_[2]" id="" class="form-control">
+                            <span class="text-danger error-text n_new_loan2_error"></span>
                         </div>
                         <div class="form-group">
-                            <label for="loansRe3">Loans returned 3</label>
-                            <input type="number" name="loansRe3" id="" class="form-control">
-                            <span class="text-danger error-text loansRe3_error"></span>
+                            <label for="n_new_loan_[3]">New Loans Taken 3</label>
+                            <input type="number" name="n_new_loan_[3]" id="" class="form-control">
+                            <span class="text-danger error-text n_new_loan3_error"></span>
                         </div>
                         <div class="form-group">
-                            <label for="loansRe4">Loans returned 4</label>
-                            <input type="number" name="loansRe4" id="" class="form-control">
-                            <span class="text-danger error-text loansRe4_error"></span>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="newLoansTa1">New Loans Taken 1</label>
-                            <input type="number" name="newLoansTa1" id="" class="form-control">
-                            <span class="text-danger error-text newLoansTa1_error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="newLoansTa2">New Loans Taken 2</label>
-                            <input type="number" name="newLoansTa2" id="" class="form-control">
-                            <span class="text-danger error-text newLoansTa2_error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="newLoansTa3">New Loans Taken 3</label>
-                            <input type="number" name="newLoansTa3" id="" class="form-control">
-                            <span class="text-danger error-text newLoansTa3_error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="newLoansTa4">New Loans Taken 4</label>
-                            <input type="number" name="newLoansTa4" id="" class="form-control">
-                            <span class="text-danger error-text newLoansTa4_error"></span>
+                            <label for="n_new_loan_[4]">New Loans Taken 4</label>
+                            <input type="number" name="n_new_loan_[4]" id="" class="form-control">
+                            <span class="text-danger error-text n_new_loan4_error"></span>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group">
-                            <label for="selDisExp1">Seller discreationary expenditure 1</label>
-                            <input type="number" name="selDisExp1" id="" class="form-control">
-                            <span class="text-danger error-text selDisExp1_error"></span>
+                            <label for="n_seller_discretionary_expend_[1]">Seller discreationary expenditure 1</label>
+                            <input type="number" name="n_seller_discretionary_expend_[1]" id="" class="form-control">
+                            <span class="text-danger error-text n_seller_discretionary_expend1_error"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="selDisExp2">Seller discreationary expenditure 2</label>
-                            <input type="number" name="selDisExp2" id="" class="form-control">
-                            <span class="text-danger error-text selDisExp2_error"></span>
+                            <label for="n_seller_discretionary_expend_[2]">Seller discreationary expenditure 2</label>
+                            <input type="number" name="n_seller_discretionary_expend_[2]" id="" class="form-control">
+                            <span class="text-danger error-text n_seller_discretionary_expend2_error"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="selDisExp3">Seller discreationary expenditure 3</label>
-                            <input type="number" name="selDisExp3" id="" class="form-control">
-                            <span class="text-danger error-text selDisExp3_error"></span>
+                            <label for="n_seller_discretionary_expend_[3]">Seller discreationary expenditure 3</label>
+                            <input type="number" name="n_seller_discretionary_expend_[3]" id="" class="form-control">
+                            <span class="text-danger error-text n_seller_discretionary_expend3_error"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="selDisExp4">Seller discreationary expenditure 4</label>
-                            <input type="number" name="selDisExp4" id="" class="form-control">
-                            <span class="text-danger error-text selDisExp4_error"></span>
+                            <label for="n_seller_discretionary_expend_[4]">Seller discreationary expenditure 4</label>
+                            <input type="number" name="n_seller_discretionary_expend_[4]" id="" class="form-control">
+                            <span class="text-danger error-text n_seller_discretionary_expend4_error"></span>
                         </div>
                     </div> <br>
                     <div class="form-group">

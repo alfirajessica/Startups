@@ -26,6 +26,10 @@ class CreateValuationsTable extends Migration
             $table->integer('working_capital');
             $table->integer('depreciation_exist_assets');
             $table->integer('depreciation_rate');
+            $table->integer('total_pv_fcfe');
+            $table->integer('terminal_value');
+            $table->integer('pv_terminal_value');
+            $table->integer('business_value');
             $table->timestamps();
         });
     }

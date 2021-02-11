@@ -24,7 +24,6 @@ class CreateValuationDetailsTable extends Migration
             $table->integer('n_current_liabilities');
             $table->integer('n_working_capital');
             $table->integer('n_change_working_capital');
-            $table->integer('n_depreciation_exist_assets');
             $table->integer('n_purchase_new_assets');
             $table->integer('n_depreciation_new_assets');
             $table->integer('n_loans_returned');
