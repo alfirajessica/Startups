@@ -16,7 +16,9 @@ class UserAuthController extends Controller
 {
     function login()
     {
-        return view('auth.login');
+        
+            return view('auth.login');
+       
     }
 
     function register()
@@ -68,10 +70,11 @@ class UserAuthController extends Controller
 
     //when click login
     function check(Request $request){
+        
         //Validate requests
         $request->validate([
-             'email'=>'required|email',
-             'password'=>'required|min:5|max:10'
+                'email'=>'required|email',
+                'password'=>'required|min:5|max:10'
         ]);
 
 
@@ -92,11 +95,8 @@ class UserAuthController extends Controller
                 //return back()->with('fail','Incorrect password');
             }
         }
-    }
-
-    function home(){
-        $data = ['LoggedUserInfo'=>User::where('id','=', session('LoggedUser'))->first()];
-        return view('layout.home', $data);
+        
+        
     }
 
     function logout(){
@@ -105,6 +105,13 @@ class UserAuthController extends Controller
             return redirect('/auth/login');
         }
     }
+
+    function home(){
+        $data = ['LoggedUserInfo'=>User::where('id','=', session('LoggedUser'))->first()];
+        return view('layout.home', $data);
+    }
+
+    
 
 
 

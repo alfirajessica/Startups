@@ -121,17 +121,17 @@ Route::POST(
 
 //apply auth check middleware -- biar pas mau masuk kemanapun diminta login dulu
 Route::group(['middleware'=>['AuthCheck']], function(){
-        Route::get(
+    Route::get(
+        '/auth/login',
+        [UserAuthController::class, 'login']
+    )->name('auth.login');    
+    
+    Route::get(
             '/auth/register',
             [UserAuthController::class, 'register']
         )->name('auth.register');
     
-        Route::get(
-            '/auth/login',
-            [UserAuthController::class, 'login']
-        )->name('auth.login');
-
-        Route::get(
+    Route::get(
             '/layout/home',
             [UserAuthController::class, 'home']
         )->name('layout.home');

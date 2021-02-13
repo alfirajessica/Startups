@@ -19,6 +19,10 @@
 
     <!-- public Css -->
     <link rel="stylesheet" href="/css/shared.css">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
 
     <!-- Datatables -->

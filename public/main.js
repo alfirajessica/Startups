@@ -42,12 +42,15 @@ $(function () {
             },
             success:function(data) {
                 if (data.status == -1) {
+                    console.log("-1");
                     $('span.email_error').text(data.msg);
                 }
                 else if (data.status == 0) {
+                    console.log("0");
                     $('span.password_error').text(data.msg);
                 }
                 else{
+                    console.log("ini login");
                     $('#login_form')[0].reset();
                     window.location.href = '/layout/home';
                 }

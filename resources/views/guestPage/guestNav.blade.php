@@ -9,8 +9,6 @@
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
         </li>
-      </ul>
-      <ul class="navbar-nav mr-auto mt-2">
         <li class="nav-item">
           <a class="nav-link" href="{{ route('valToolPage.valTool')}}">Valuation Tool</a>
         </li>
